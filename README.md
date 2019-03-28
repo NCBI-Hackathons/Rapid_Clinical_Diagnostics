@@ -1,4 +1,4 @@
-quickly prioritize candidate disease-causing WES variants based on functional annotations
+Quickly prioritize candidate disease-causing WES variants based on functional annotations
 
 
 
@@ -9,5 +9,8 @@ Some of the hurdles identified:
 
 This pipeline is specifically designed for physicians and clinical interpretation of WES variants. 
 
+Currently, the python code is for specific input files. You will need to tweak the codes to read your own files. We will keep updating the code to make it easily accessible to everyone. 
+
+The current python script takes individual's annotated genomic variant file from WGSA (https://sites.google.com/site/jpopgen/wgsa) and dbNSFP (https://sites.google.com/site/jpopgen/dbNSFP) as input. Please refer to these site in terms of how to generate such input file. 
 
 

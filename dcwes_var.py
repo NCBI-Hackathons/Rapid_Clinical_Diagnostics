@@ -14,17 +14,17 @@ def parent_var(file):
         if line[0]!='chr':
             key = line[0]+'\t'+line[1]+'\t'+line[2]+'\t'+line[3]
             parents_var[key] = 0
-with open('124821_S12.g2.vcf.1alt.vcf.gz.snp.vcf.gz.annotated.snp','r') as f6:
+with open('anno_snp1','r') as f6:
     p_snp_file = f6.readlines()   
-with open('124821_S12.g2.vcf.1alt.vcf.gz.indel.vcf.gz.annotated.indel','r') as f7: 
+with open('anno_indel1','r') as f7: 
     p_indel_file = f7.readlines()  
-with open('124822_S13.g2.vcf.1alt.vcf.gz.snp.vcf.gz.annotated.snp','r') as f8:
+with open('anno_snp2','r') as f8:
     m_snp_file = f8.readlines()   
-with open('124822_S13.g2.vcf.1alt.vcf.gz.indel.vcf.gz.annotated.indel','r') as f9: 
+with open('anno_indel2','r') as f9: 
     m_indel_file = f9.readlines()
-with open('S12.g2.dbNSFP.out','r',encoding='latin-1') as f10:
+with open('anno_dbnsfp1','r',encoding='latin-1') as f10:
     p_dbnsfp_file = f10.readlines()   
-with open('S13.g2.dbNSFP.out','r',encoding='latin-1') as f11: 
+with open('anno_dbnsfp2','r',encoding='latin-1') as f11: 
     m_dbnsfp_file = f11.readlines()  
 parent_var(p_snp_file)
 parent_var(p_indel_file)
@@ -39,9 +39,9 @@ f9.close()
 f10.close()
 f11.close()
 # Patient's variants
-with open('124823_S14.g2.vcf.1alt.vcf.gz.snp.vcf.gz.annotated.snp','r') as f0:
+with open('anno_snp3','r') as f0:
     snp_file = f0.readlines()
-with open('124823_S14.g2.vcf.1alt.vcf.gz.indel.vcf.gz.annotated.indel','r') as f3:     #WGSA indel file
+with open('anno_indel3','r') as f3:     #WGSA indel file
     indel_file = f3.readlines()
 clinvar = {}
 hgmd = {}
@@ -139,7 +139,7 @@ for line in pheno:
     line[0]= line[0].lower
     phenotype[line[0]] = 0
     
-with open('S14.g2.dbNSFP.out','r',encoding = 'latin-1') as f2:    #dbnsfp out
+with open('anno_dbnsfp3','r',encoding = 'latin-1') as f2:    #dbnsfp out
     dbnsfp_file = f2.readlines()
     
 tier1 = open('tier1','w+')    # report variants
